@@ -1,0 +1,76 @@
+.hoved:not(#container){
+    background-image: url("../bilder/motorvei.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#utenfor{
+    margin-right:150px;
+    margin-left: 150px;
+}
+
+#container{
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    display: grid;
+    gap:15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+
+#container > div{
+    border: 3px solid rgb(0,0,0);
+    border-radius: 13px;
+    height:300px;
+    font-size:45px;
+    font-family:monospace;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#container > div > a{
+    margin-top: -230px;
+    color: black;
+}
+
+#overskrift{
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:hsl(358,55%, 95%);
+    font-size: 2vw;
+}
+
+#a{
+    background-image:url("../bilder/motorsykkel.png");
+}
+#b{
+    background-image:url("../bilder/lett_motorsykkel.png");
+}
+#c{
+    background-image:url("../bilder/mellomtung_motorsykkel.png");
+}
+#d{
+    background-image:url("../bilder/bil.png");
+}
+#e{
+    background-image:url("../bilder/");
+}
+#f{
+    background-image:url("../bilder/")
+}
+#g{
+    background-image:url("../bilder/")
+}
+#h{
+    background-image:url("../bilder/")
+}
+#i{
+    background-image:url("../bilder/")
+}

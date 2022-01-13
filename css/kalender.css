@@ -1,0 +1,89 @@
+#hoved{
+    background-image: url("../bilder/blur.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 3vw;
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+}
+
+#bookingkalender{
+    margin:50px 85px ;
+    max-width: 900px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    
+}
+
+
+
+.januar > #tittel {
+    text-align: center;
+    border-radius: 25px;
+    font-size: 80px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+table, th, td{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 27px;
+    border-collapse: collapse;
+    border:3px solid black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+td,th{
+    border-radius: 13px;
+}
+
+tr:nth-child(odd){
+    background: rgba(16, 18, 141, 0.84);
+}
+
+.booket{
+    background-color: rgba(256, 18, 41, 0.84);
+}
+
+tr, th, td{
+    padding: 15px;
+}
+
+td,th{
+    color: rgb(255, 255, 255);
+}
+td:hover{
+    background: rgba(236, 222, 109, 0.7);
+}
+
+td > a{
+    color:white;
+}
+
+.book{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding:13px 37px;
+    text-align: center;
+}
+
+@media(max-width: 700px){
+    .januar{
+        color:rgb(255, 255, 255);
+    }
+
+}
