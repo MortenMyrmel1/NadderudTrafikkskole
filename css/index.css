@@ -71,4 +71,8 @@ a > p{
         font-size: 3vw;
     }
 
+    #overskrift, h1{
+        font-size: 45px;
+    }
+    
 }
