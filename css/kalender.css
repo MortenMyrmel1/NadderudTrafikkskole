@@ -139,6 +139,10 @@ td > a:hover{
 
   @media (max-width: 600px) {
 
+    #pakke{
+        margin-top:350px;
+    }  
+      
     h1{
         font-size: 30px;
     }
