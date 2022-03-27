@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fargespill</title>
+
+    <style>
+        p{
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+        }
+        #rod{
+            
+            background-color: red;
+        }
+
+        #gul{
+            background-color: yellow;
+        }
+
+        #gronn{
+            background-color: green;
+        }
+
+        div{
+            display: flex;
+        }
+        #tom_boks{
+            width: 2000px;
+            height:2000px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p id="rod"></p>
+    <p id="gul"></p>
+    <p id = "gronn"></p>
+    </div>
+    <p id="tekst">Klikk på den røde firkanten</p>
+    <div id="tom_boks"></div>
+    <script>
+        let rodEl = document.querySelector("#rod")
+        let gulEl = document.querySelector("#gul")
+        let gronnEl = document.querySelector("#gronn")
+        let tekstEl= document.querySelector("#tekst")
+        let tom_boksEl= document.querySelector("#tom_boks")
+
+        function rod(){
+            tekstEl.innerText = "Før musepekeren over den gule firkanten."
+        }
+
+        rodEl.addEventListener("click", rod);
+
+        function gul(){
+            rodEl.removeEventListener("click", rod);
+            console.log("Musen er her")
+            tekstEl.innerText = "Dobbeltklikk på den grønne firkanten."
+        }
+        gulEl.addEventListener("mouseover", gul)
+
+        function gronn(){
+            gulEl.removeEventListener("mouseover", gul);
+            console.log("double click skjedde")
+            tekstEl.innerText = "Trykk lenger ned på siden."
+        }
+
+        gronnEl.addEventListener("dblclick", gronn)
+
+        function boks(){
+            gronnEl.removeEventListener("dblclick", gronn);
+            console.log("boks")
+            tekstEl.innerText = "Klikk på den røde firkanten"
+        }
+
+        tom_boksEl.addEventListener("click", boks)
+
+    </script>
+</body>
+</html>
