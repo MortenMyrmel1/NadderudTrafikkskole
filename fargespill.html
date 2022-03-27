@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,14 @@
 
     <style>
         p{
-            width: 200px;
-            height: 50px;
+            width: 500px;
+            height: 250px;
             cursor: pointer;
+            margin-left: 30px;
+            margin-bottom: 0px;
         }
+
         #rod{
-            
             background-color: red;
         }
 
@@ -25,24 +27,34 @@
             background-color: green;
         }
 
+
         div{
             display: flex;
         }
         #tom_boks{
-            width: 2000px;
-            height:2000px;
+            width: 100%;
+            height:500px;
+            margin-top: 0px;
         }
+        
+        #gif { visibility: hidden; }
+        /*Gjør gif-en usynlig*/
+
     </style>
 </head>
 <body>
-    <div>
-    <p id="rod"></p>
-    <p id="gul"></p>
-    <p id = "gronn"></p>
+    <div >
+        <p id="rod"></p>
+        <p id="gul"></p>
+        <p id="gronn"></p>
     </div>
-    <p id="tekst">Klikk på den røde firkanten</p>
-    <div id="tom_boks"></div>
+    <h1 id="tekst">Klikk på den røde firkanten</h1>
+    <div id="tom_boks">
+        <img id="gif" src="dance_moves.gif">
+    </div>
     <script>
+
+        //Henter html elementer
         let rodEl = document.querySelector("#rod")
         let gulEl = document.querySelector("#gul")
         let gronnEl = document.querySelector("#gronn")
@@ -73,10 +85,14 @@
         function boks(){
             gronnEl.removeEventListener("dblclick", gronn);
             console.log("boks")
-            tekstEl.innerText = "Klikk på den røde firkanten"
+            tekstEl.innerText = "Oi da"
         }
 
         tom_boksEl.addEventListener("click", boks)
+
+        document.querySelector("#tom_boks").onclick = function() {
+        document.querySelector("#gif").style.visibility = "visible";
+}
 
     </script>
 </body>
