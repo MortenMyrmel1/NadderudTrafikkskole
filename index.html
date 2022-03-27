@@ -1,1 +1,89 @@
 
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjemmeside</title>
+
+<link rel="stylesheet" href="felles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,200&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    font-family: 'Fira Sans Condensed', sans-serif;   
+}
+p{
+    margin-top:20px;
+}
+
+h1::first-letter{
+    font-size: 80px;
+}
+
+#bak{
+    background-color: rgba(202, 178, 178,0.63);
+    height: 900px;
+    margin: 200px 0;
+    
+}
+
+#rom{
+    background-color: rgb(115, 197, 166);
+
+}
+
+#velkommen{
+    margin:0 100px;
+    padding:100px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    border-radius: 10px;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(115, 197, 166);
+}
+
+.navbar{
+    background-color: #9b8882;
+}
+
+@media(max-width: 670px){
+    p{
+      font-size: 20px;  
+    }
+    h1{
+        font-size: 20px;
+    }
+
+}
+</style>
+
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li id="side"><a href="#" >Hjem</a></li>
+            <li><a href="kalkulator.html">Kalkulator</a></li>
+            <li><a href="valutakalkulator.html">Valutakalkulator</a></li>
+            <li><a href="musposisjon.html">Muspeker</a></li>
+            <li><a href="fargespill.html">Fargespill</a></li>
+        </ul>
+    </div>
+    <div id="rom"></div>
+    <div class="hoved">
+        
+        <div id="bak">
+            <div id="velkommen">
+                <h1>Velkommen</h1>
+                <p>Her kan du finne nyttige verktøy som kalkulatorer og noen spill</p>
+            </div>
+        </div> 
+    </div>          
+</body>
+</html>
+
