@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musposisjon</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(202, 178, 178,0.63);
+        }
+        h1, h2{
+            margin: 10px;
+        }
+        #hn{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        #vo{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="svar"></h1>
+    <h1>Posisjon til musepekeren</h1>
+    <h2 id="xPos">x-posisjon: Trykk på Skjerm</h2>
+    <h2 id="yPos">y-posisjon: Trykk på Skjerm </h2>
+    <h3 id="ferdig"></h3>
+    <h4 id="hn">(100,100)</h4>
+    <h4 id="vo">(0,0)</h4>
+    
+    <script>
+        let bodyEl = document.querySelector('body')
+        let xPosEl = document.querySelector('#xPos')
+        let yPosEl = document.querySelector('#yPos')
+
+        let a;
+        let b;
+        
+        let x = (Math.floor(Math.random()*100) + 1)
+        let y = (Math.floor(Math.random()*100) + 1)
+        let svarEl = document.querySelector('#svar')
+        svarEl.innerText = `Finn koordinatet: (${x},${y})` 
+
+        function is_finished(a, b, x, y) {
+            return a == x && b == y
+        }
+
+        //legger til en lytter for click
+        bodyEl.addEventListener('click', function(e){
+            a = Math.floor(e.clientX/13.65)
+            b = Math.floor(e.clientY/6.34)
+            xPosEl.innerText = `x-posisjon: ${a}`
+            yPosEl.innerText = `y-posisjon: ${b}`
+
+            console.log(a, x, b, y)
+            
+            if(is_finished(a, b, x, y)){
+                console.log(x, y)
+                let ferdigEl = document.querySelector('#ferdig')
+                ferdigEl.innerText = "Gratulerer du klarte det"
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
